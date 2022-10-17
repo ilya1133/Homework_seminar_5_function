@@ -4,6 +4,31 @@
 [345, 897, 568, 234] -> 2
 */
 
+// Методы
+void FillArrayRandomNumbers(int [] array) //Заполнение массива
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(99, 999);
+    }
+}
+
+void PrintArray(int[] array) //Вывод массива на экран
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+
+int ReadInt(string message)  //Функция ввода
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
 int size = ReadInt("Введите размерность массива: ");
 int [] numbers = new int[size];
 
@@ -29,28 +54,3 @@ if (result % 10 == 2 || result % 10 == 3 || result % 10 == 4)
 else
 
     Console.WriteLine($"В массиве {result} четных чисел");
-
-// Методы
-void FillArrayRandomNumbers(int [] array) //Заполнение массива
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(99, 999);
-    }
-}
-
-void PrintArray(int[] array) //Вывод массива на экран
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
-
-
-int ReadInt(string message)  //Функция ввода
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
